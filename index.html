@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Digvijay Wagh — Software Engineer</title>
-<meta name="description" content="Digvijay Wagh — Junior Software Engineer in Pune. Golang & infrastructure background, building toward AI and data engineering." />
+<meta name="description" content="Digvijay Wagh — Backend & AI Engineer in Pune. Golang, cloud infrastructure, and AI-powered systems." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +15,13 @@
 <header class="topbar">
   <a href="#top" class="topbar__mark">dw</a>
   <nav class="topbar__nav" aria-label="Section navigation">
-    <a href="#experience">experience</a>
-    <a href="#projects">projects</a>
-    <a href="#skills">skills</a>
-    <a href="#education">education</a>
-    <a href="#contact">contact</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <a href="#resume" class="topbar__cta">Resume</a>
   </nav>
   <button class="topbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -27,185 +29,61 @@
 </header>
 
 <main id="top">
-
-  <section class="hero">
-    <p class="hero__status"><span class="dot" aria-hidden="true"></span>currently — junior software engineer @ datamotive technologies, pune</p>
-    <h1 class="hero__name">Digvijay Wagh</h1>
-    <p class="hero__role">Backend &amp; infrastructure engineer, moving into AI and data engineering.</p>
-    <p class="hero__bio">A year of production Golang behind me — disaster recovery platforms, cloud migration
-      tooling, VM automation — and now building multi-agent AI systems on top of that same instinct for
-      reliable, observable infrastructure.</p>
-    <ul class="hero__links">
-      <li><a href="mailto:waghdigvijay2010@gmail.com">email</a></li>
-      <li><a href="tel:+919307054948">+91 93070 54948</a></li>
-      <li><a href="#" data-link="linkedin">linkedin</a></li>
-      <li><a href="#" data-link="github">github</a></li>
-      <li><a href="#" data-link="leetcode">leetcode</a></li>
-      <li><a href="#" data-link="tuf">tuf</a></li>
-    </ul>
-  </section>
+  <section class="hero" id="hero"><!-- rendered by render.js --></section>
 
   <section class="section" id="experience">
     <h2 class="section__title">Experience</h2>
-
-    <div class="timeline">
-
-      <article class="entry">
-        <div class="entry__rail">
-          <span class="entry__dot"></span>
-          <span class="entry__line"></span>
-        </div>
-        <div class="entry__body">
-          <p class="entry__date">Sep 2025 — Jun 2026</p>
-          <h3 class="entry__role">Junior Software Engineer <span class="entry__at">— Datamotive Technologies, Pune</span></h3>
-
-          <h4 class="entry__group">Disaster recovery &amp; cloud migration</h4>
-          <ul>
-            <li>Contributed to a production-grade VM-level disaster recovery and cloud migration platform, developing backend features and resolving bugs in Golang-based microservices.</li>
-            <li>Worked on an AI agent for block-level disk ransomware detection and security analysis.</li>
-          </ul>
-
-          <h4 class="entry__group">Nutanix image packaging &amp; CI automation</h4>
-          <ul>
-            <li>Set up a Nutanix base-image VM and Jenkins job for image builds; wrote Packer scripts to automate VM provisioning, service registration, and generation of compressed QCOW2 images for customer delivery.</li>
-          </ul>
-
-          <h4 class="entry__group">Golang infrastructure &amp; automation utilities</h4>
-          <ul>
-            <li>Built infrastructure discovery utilities across VMware, Nutanix, and Azure to collect customer infrastructure data prior to product installation, enabling compatibility validation.</li>
-            <li>Designed a network monitoring and diagnostics tool to troubleshoot replication failures, capturing client-side network stats and generating TCP-level performance reports, visualized in Python.</li>
-            <li>Engineered an automation tool to eliminate manual post-recovery configuration on Windows VMs — sysprep, SAN policy setup, IP/hostname updates, Active Directory rejoin, and DNS record updates.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="entry__rail">
-          <span class="entry__dot"></span>
-        </div>
-        <div class="entry__body">
-          <p class="entry__date">Jun 2025 — Sep 2025</p>
-          <h3 class="entry__role">Backend Intern <span class="entry__at">— Datamotive Technologies, Pune</span></h3>
-          <p class="entry__note">Same team, prior to full-time conversion — early work on the Golang disaster
-            recovery and cloud migration platform above.</p>
-        </div>
-      </article>
-
-    </div>
+    <div class="timeline" id="experienceList"><!-- rendered by render.js --></div>
   </section>
 
   <section class="section" id="projects">
     <h2 class="section__title">Projects</h2>
-
-    <div class="projects">
-
-      <article class="project">
-        <div class="project__head">
-          <h3>SREAgent</h3>
-          <div class="project__tags">
-            <span class="tag tag--ai">LangGraph</span>
-            <span class="tag tag--ai">LangChain</span>
-            <span class="tag tag--infra">Jenkins</span>
-            <span class="tag tag--infra">Azure Key Vault</span>
-          </div>
-        </div>
-        <p class="project__desc">A multi-agent system that diagnoses failed Jenkins builds — code bugs, test
-          failures, resource limits, permission issues, missing files or dependencies — investigates the failure,
-          and opens a GitHub pull request with a proposed fix.</p>
-        <ul>
-          <li>Secured and deployed with Azure Key Vault for credential management and Jenkins request validation.</li>
-          <li>Runs as a persistent, auto-restarting service with database-backed build history.</li>
-          <li>Posts Slack notifications on build completion.</li>
-        </ul>
-      </article>
-
-      <article class="project">
-        <div class="project__head">
-          <h3>ProductPulse AI</h3>
-          <div class="project__tags">
-            <span class="tag tag--ai">RAG</span>
-            <span class="tag tag--ai">Qwen embeddings</span>
-            <span class="tag tag--infra">Databricks</span>
-            <span class="tag tag--infra">PySpark</span>
-          </div>
-        </div>
-        <p class="project__desc">A retail AI copilot that processes structured data and PDFs to answer product,
-          returns, support, and metric queries.</p>
-        <ul>
-          <li>Built on Databricks with RAG, PySpark, and Lakebase for retrieval over mixed data sources.</li>
-          <li>Llama-powered Streamlit app with LLM-based tool planning to route queries to the right handler.</li>
-        </ul>
-      </article>
-
-    </div>
+    <p class="section__hint">Tap a project for the full write-up.</p>
+    <div class="projects" id="projectsList"><!-- rendered by render.js --></div>
   </section>
 
   <section class="section" id="skills">
-    <h2 class="section__title">Skills &amp; certifications</h2>
+    <h2 class="section__title">Skills</h2>
+    <div class="skills" id="skillsList"><!-- rendered by render.js --></div>
+  </section>
 
-    <div class="skills">
-      <div class="skills__group">
-        <h4>Languages</h4>
-        <div class="chips">
-          <span class="chip">Golang</span><span class="chip">Python</span><span class="chip">C++</span>
-        </div>
-      </div>
-      <div class="skills__group">
-        <h4>Software engineering</h4>
-        <div class="chips">
-          <span class="chip">Gin</span><span class="chip">FastAPI</span><span class="chip">Git</span>
-          <span class="chip">Linux</span><span class="chip">MySQL</span><span class="chip">Jenkins</span>
-        </div>
-      </div>
-      <div class="skills__group">
-        <h4>Virtualization &amp; cloud</h4>
-        <div class="chips">
-          <span class="chip">VMware</span><span class="chip">Nutanix</span><span class="chip">AWS</span><span class="chip">Azure</span>
-        </div>
-      </div>
-      <div class="skills__group">
-        <h4>AI &amp; data</h4>
-        <div class="chips">
-          <span class="chip">RAG</span><span class="chip">AI Agents</span><span class="chip">LangChain</span>
-          <span class="chip">LangGraph</span><span class="chip">PySpark</span><span class="chip">Databricks</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="cert">
-      <p class="cert__label">Certification</p>
-      <p class="cert__name">IBM Data Engineering Professional Certificate</p>
-    </div>
+  <section class="section" id="certifications">
+    <h2 class="section__title">Certifications</h2>
+    <p class="section__hint">Tap a certificate to view it.</p>
+    <ul class="certs" id="certsList"><!-- rendered by render.js --></ul>
   </section>
 
   <section class="section" id="education">
     <h2 class="section__title">Education</h2>
-    <div class="edu">
-      <p class="edu__school">Vishwakarma Institute of Information Technology, Pune</p>
-      <p class="edu__degree">B.Tech, Information Technology — CGPA 9.05</p>
-      <p class="edu__date">2021 — 2025</p>
-    </div>
+    <div class="edu" id="eduList"><!-- rendered by render.js --></div>
+  </section>
+
+  <section class="section section--resume" id="resume">
+    <h2 class="section__title">Resume</h2>
+    <div id="resumeCard"><!-- rendered by render.js --></div>
   </section>
 
   <section class="section section--contact" id="contact">
     <h2 class="section__title">Get in touch</h2>
-    <p class="contact__lede">Open to junior/early-career roles in backend, infrastructure, and AI engineering.</p>
-    <ul class="contact__links">
-      <li><a href="mailto:waghdigvijay2010@gmail.com">waghdigvijay2010@gmail.com</a></li>
-      <li><a href="tel:+919307054948">+91 93070 54948</a></li>
-      <li><a href="#" data-link="linkedin">LinkedIn</a></li>
-      <li><a href="#" data-link="github">GitHub</a></li>
-      <li><a href="#" data-link="leetcode">LeetCode</a></li>
-      <li><a href="#" data-link="tuf">Take U Forward</a></li>
-    </ul>
+    <p class="contact__lede">Open to junior/early-career roles in backend, infrastructure, Data and AI engineering.</p>
+    <ul class="contact__links" id="contactList"><!-- rendered by render.js --></ul>
   </section>
-
 </main>
 
 <footer class="footer">
   <p>Digvijay Wagh · Pune, India · <span id="year"></span></p>
 </footer>
 
-<script src="script.js"></script>
+<!-- Detail modal, shared by projects and experience items -->
+<dialog class="modal" id="detailModal">
+  <div class="modal__inner">
+    <button class="modal__close" id="modalClose" aria-label="Close">×</button>
+    <div id="modalBody"><!-- filled per-item by render.js --></div>
+  </div>
+</dialog>
+
+<script src="icons.js"></script>
+<script src="content.js"></script>
+<script src="render.js"></script>
 </body>
 </html>
